@@ -1,0 +1,290 @@
+Q1.html — Basic Web Page
+<!DOCTYPE html>
+<html>
+<head>
+ <title>My First Web Page</title>
+</head>
+<body>
+ <h1>Sarthak Singh Rathore</h1>
+ <p>
+ Hello, my name is Sarthak Singh Rathore. I am a cybersecurity 
+student
+ interested in web development, programming, and learning new 
+technologies.
+ </p>
+</body>
+</html>
+
+Q2.html — Google Hyperlink
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Google Link</title>
+</head>
+<body>
+ <a href="https://www.google.com" target="_blank">
+ Visit Google
+ </a>
+</body>
+</html>
+
+Q3.html — Image Insertion
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Favorite Cartoon Image</title>
+</head>
+<body>
+ <img src="naruto.jpg" alt="Naruto animated character">
+</body>
+</html>
+
+Q4.html — Hobby Paragraph
+<!DOCTYPE html>
+<html><head>
+ <title>My Hobby</title>
+</head>
+<body>
+<p>
+ My favorite hobby is <strong>coding</strong> because it improves my 
+skills.
+ I find programming very <em>interesting</em> and creative.
+</p>
+</body>
+</html>
+
+Q5.html — Line Break Example
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Line Break Example</title>
+</head>
+<body>
+<p>
+ I am learning web development.<br>
+ HTML is the foundation of every webpage.
+</p>
+</body>
+</html>
+
+Q6.html — Blockquote Example
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Quote</title>
+</head>
+<body>
+<blockquote>
+ "The future belongs to those who believe in the beauty of their 
+dreams."
+ <cite>- Eleanor Roosevelt</cite>
+</blockquote>
+</body>
+</html>
+
+Q7.html — Heading Levels
+<!DOCTYPE html>
+<html>
+<head> <title>Heading Levels</title>
+</head>
+<body>
+<h1>Sarthak Singh Rathore</h1>
+<h2>Cybersecurity Student</h2>
+<h3>Hobbies: Coding, Reading, Learning Technology</h3>
+</body>
+</html>
+
+Q8.html — Mark and Small Tag
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mark Tag Example</title>
+</head>
+<body>
+<p>
+ I am learning <mark>HTML</mark> for web development.
+ <small>Updated recently</small>
+</p>
+</body>
+</html>
+
+Q9.html — Strong and Em Tag
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Text Formatting</title>
+</head>
+<body>
+<p>
+ <strong>Cybersecurity</strong> is an important field and
+ <em>continuous learning</em> helps improve skills.
+</p>
+</body>
+</html>
+
+Q10.html — Code Tag
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Code Example</title>
+</head><body>
+<p>
+ JavaScript code example:
+ <code>console.log("Hello World");</code>
+</p>
+</body>
+</html>
+
+Q11.html — Span Elements
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Span Example</title>
+</head>
+<body>
+<p>
+ <span>HTML</span> creates structure,
+ <span>CSS</span> designs pages,
+ <span>JavaScript</span> adds functionality.
+</p>
+</body>
+</html>
+
+Q12.html — Multiple Inline Elements
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Inline Formatting</title>
+</head>
+<body>
+<p>
+ <strong>Web Development</strong> is very useful.<br>
+ It is <em>creative</em> and helps build
+ <mark>modern websites</mark>.
+ <small>Practice regularly</small>
+</p>
+</body>
+</html>
+
+Q13.html — Header Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Header Example</title>
+</head><body>
+<header>
+ <h1>Sarthak's Website</h1>
+</header>
+</body>
+</html>
+
+Q14.html — Navigation Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Navigation Example</title>
+</head>
+<body>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+</body>
+</html>
+
+Q15.html — Main Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Main Section</title>
+</head>
+<body>
+<main>
+<p>
+ Hello, I am Sarthak. This webpage represents my personal information
+ and learning journey.
+</p>
+</main>
+</body>
+</html>
+
+Q16.html — About Me Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>About Me</title>
+</head>
+<body>
+<main>
+<section>
+<h2>About Me</h2>
+<p>
+ I am a cybersecurity student who enjoys programming,
+ web development, and exploring new technologies.
+</p>
+</section>
+</main>
+</body>
+</html>
+
+Q17.html — Article Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>My First Blog</title>
+</head>
+<body>
+<article>
+<h2>My First Blog</h2>
+<p>
+ Today I started learning web development.
+ It is an exciting journey where I can create websites
+ and understand internet technologies.
+</p>
+</article>
+</body>
+</html>
+
+Q18.html — Aside Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Useful Links</title>
+</head><body>
+<aside>
+<h3>Useful Links</h3>
+<a href="https://github.com">GitHub</a><br>
+<a href="https://google.com">Google</a>
+</aside>
+</body>
+</html>
+
+Q19.html — Footer Section
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Footer Example</title>
+</head>
+<body>
+<footer>
+<p>
+ 2025 Sarthak Singh Rathore
+</p>
+</footer>
+</body>
+</html>
+
+Q20.html — Complete Webpage Structure
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Complete Web Architecture</title>
+</head>
+<body>
+<header>
+<h1>Sarthak's Website</h1>
+</header>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
