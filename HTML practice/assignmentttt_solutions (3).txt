@@ -1,11 +1,4 @@
-====================================================================
-ASSIGNMENT 3 - SOLUTIONS (HTML Only, No CSS/JS)
-====================================================================
-Sensei's note: The assignment asks for a SEPARATE .html file per
-question. Copy each block below into its own file (filename given
-in the header) before you submit. Keep the comments — your teacher
-asked for them, and they show you understood WHY, not just WHAT.
-====================================================================
+
 
 
 -------------------- QUESTION 1 (q1.html) --------------------------
@@ -506,6 +499,3 @@ Page with all important <head> elements.
 </html>
 
 
-====================================================================
-END OF SOLUTIONS
-====================================================================
