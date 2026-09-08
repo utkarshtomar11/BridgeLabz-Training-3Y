@@ -1,0 +1,937 @@
+ASSIGNMENT 3 — SOLUTIONS
+HTML Block and Inline Elements
+
+===========================================================
+Q1.html — Multi-Section Resume Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Resume</title>
+</head>
+<body>
+
+  <!-- Header: Name and contact info -->
+  <header>
+    <h1>Sarthak Singh Rathore</h1>
+    <p>Email: sarthak@example.com | Phone: +91-9876543210</p>
+  </header>
+
+  <!-- Navigation: Quick links -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <main>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a cybersecurity student passionate about web development and learning new technologies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML &amp; CSS</li>
+        <li>Python Programming</li>
+        <li>Network Security Basics</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ol>
+        <li>Personal Portfolio Website</li>
+        <li>Basic Network Scanner Tool</li>
+        <li>Student Result Management System</li>
+      </ol>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <table border="1">
+        <tr>
+          <th>Course</th>
+          <th>Institute</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>B.Tech - Cybersecurity</td>
+          <td>ABC Institute of Technology</td>
+          <td>2023 - 2027</td>
+        </tr>
+        <tr>
+          <td>Higher Secondary</td>
+          <td>XYZ Senior Secondary School</td>
+          <td>2021 - 2023</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sarthak Singh Rathore. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q2.html — Product Catalog Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Catalog</title>
+</head>
+<body>
+
+<h1>Online Store - Product Catalog</h1>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Image</th>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Availability</th>
+  </tr>
+
+  <tr>
+    <td><img src="headphones.jpg" alt="Wireless Headphones" width="80"></td>
+    <td>Wireless Headphones</td>
+    <td>Over-ear Bluetooth headphones with noise cancellation</td>
+    <td>₹2,499</td>
+    <td>In Stock</td>
+  </tr>
+
+  <tr>
+    <td><img src="smartwatch.jpg" alt="Smart Watch" width="80"></td>
+    <td>Smart Watch</td>
+    <td>Fitness tracking smartwatch with heart-rate monitor</td>
+    <td>₹3,999</td>
+    <td>In Stock</td>
+  </tr>
+
+  <tr>
+    <td><img src="keyboard.jpg" alt="Mechanical Keyboard" width="80"></td>
+    <td>Mechanical Keyboard</td>
+    <td>RGB backlit mechanical keyboard</td>
+    <td colspan="2">Currently Unavailable</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2"><img src="bundle.jpg" alt="Combo Offer" width="80"></td>
+    <td rowspan="2">Combo Offer</td>
+    <td>Headphones + Smart Watch Bundle</td>
+    <td>₹5,999</td>
+    <td>In Stock</td>
+  </tr>
+  <tr>
+    <td>Limited period offer</td>
+    <td>-</td>
+    <td>Few Left</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
+
+===========================================================
+Q3.html — Course Registration Form Structure
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Registration</title>
+</head>
+<body>
+
+<h1>Course Registration Form</h1>
+
+<form>
+
+  <fieldset>
+    <legend>Personal Details</legend>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email"><br><br>
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <legend>Course Selection</legend>
+
+    <label for="course">Choose a Course:</label>
+    <select id="course" name="course">
+      <option value="webdev">Web Development</option>
+      <option value="cybersecurity">Cybersecurity</option>
+      <option value="datascience">Data Science</option>
+      <option value="ai">Artificial Intelligence</option>
+    </select>
+  </fieldset>
+
+</form>
+
+<h2>Available Course Schedules</h2>
+<table border="1">
+  <tr>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Instructor</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>10:00 AM - 12:00 PM</td>
+    <td>Mr. Sharma</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>2:00 PM - 4:00 PM</td>
+    <td>Ms. Verma</td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>11:00 AM - 1:00 PM</td>
+    <td>Dr. Iyer</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+===========================================================
+Q4.html — Company Layout Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Layout</title>
+</head>
+<body>
+
+<header>
+  <h1>Nexora Technologies</h1>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>About the Company</h2>
+    <p>Nexora Technologies is a software company specializing in cybersecurity solutions and web application development for businesses worldwide.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services Offered</h2>
+    <ul>
+      <li>Web Application Development</li>
+      <li>Cybersecurity Audits</li>
+      <li>Cloud Infrastructure Setup</li>
+      <li>IT Consulting</li>
+    </ul>
+  </section>
+
+</main>
+
+<aside>
+  <blockquote>
+    "Innovation and security go hand in hand — that is the foundation Nexora is built on."
+    <cite>- CEO, Nexora Technologies</cite>
+  </blockquote>
+</aside>
+
+<footer id="contact">
+  <p>Email: contact@nexora.com</p>
+  <p>Address: 12 Tech Park Road, Bengaluru, India</p>
+</footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q5.html — Nested List Structure (University Hierarchy)
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Structure</title>
+</head>
+<body>
+
+<h1>University Hierarchy</h1>
+
+<ul>
+  <li>University
+    <ul>
+      <li>Department of Computer Science
+        <ol>
+          <li>Course: Data Structures
+            <ul>
+              <li>Topic: Arrays</li>
+              <li>Topic: Linked Lists</li>
+              <li>Topic: Trees</li>
+            </ul>
+          </li>
+          <li>Course: Operating Systems
+            <ul>
+              <li>Topic: Process Management</li>
+              <li>Topic: Memory Management</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+
+      <li>Department of Cybersecurity
+        <ol>
+          <li>Course: Network Security
+            <ul>
+              <li>Topic: Firewalls</li>
+              <li>Topic: Intrusion Detection</li>
+            </ul>
+          </li>
+          <li>Course: Ethical Hacking
+            <ul>
+              <li>Topic: Penetration Testing</li>
+              <li>Topic: Vulnerability Assessment</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>
+
+
+===========================================================
+Q6.html — Restaurant Menu Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Menu</title>
+</head>
+<body>
+
+<header>
+  <h1>The Green Fork Restaurant</h1>
+</header>
+
+<nav>
+  <a href="#starters">Starters</a>
+  <a href="#main">Main Course</a>
+  <a href="#desserts">Desserts</a>
+</nav>
+
+<section id="starters">
+  <h2>Starters</h2>
+  <table border="1">
+    <tr>
+      <th>Dish Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Paneer Tikka</td>
+      <td>Grilled cottage cheese with spices</td>
+      <td>₹220</td>
+    </tr>
+    <tr>
+      <td>Spring Rolls</td>
+      <td>Crispy vegetable rolls</td>
+      <td>₹180</td>
+    </tr>
+  </table>
+</section>
+
+<section id="main">
+  <h2>Main Course</h2>
+  <table border="1">
+    <tr>
+      <th>Dish Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Butter Chicken</td>
+      <td>Creamy tomato-based chicken curry</td>
+      <td>₹350</td>
+    </tr>
+    <tr>
+      <td>Veg Biryani</td>
+      <td>Fragrant rice with mixed vegetables</td>
+      <td>₹280</td>
+    </tr>
+  </table>
+</section>
+
+<section id="desserts">
+  <h2>Desserts</h2>
+  <table border="1">
+    <tr>
+      <th>Dish Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Gulab Jamun</td>
+      <td>Sweet milk dumplings in syrup</td>
+      <td>₹120</td>
+    </tr>
+    <tr>
+      <td>Chocolate Brownie</td>
+      <td>Warm brownie with chocolate sauce</td>
+      <td>₹150</td>
+    </tr>
+  </table>
+</section>
+
+<footer>
+  <p>Contact: +91-9876543210 | 45 MG Road, Pune</p>
+</footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q7.html — Conference Schedule Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Schedule</title>
+</head>
+<body>
+
+<h1>Tech Conference 2025 - Schedule</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Session</th>
+      <th>Time</th>
+      <th>Topic</th>
+      <th>Speaker</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Morning</td>
+      <td>9:00 AM - 11:00 AM</td>
+      <td>Introduction to Cybersecurity</td>
+      <td>Dr. Anita Rao</td>
+    </tr>
+    <tr>
+      <td>Morning</td>
+      <td>11:15 AM - 1:00 PM</td>
+      <td>Cloud Computing Trends</td>
+      <td>Mr. Rohan Mehta</td>
+    </tr>
+    <tr>
+      <td>Afternoon</td>
+      <td>2:00 PM - 4:00 PM</td>
+      <td>AI in Modern Applications</td>
+      <td>Ms. Kavita Nair</td>
+    </tr>
+    <tr>
+      <td>Evening</td>
+      <td>5:00 PM - 6:30 PM</td>
+      <td>Panel Discussion &amp; Networking</td>
+      <td>All Speakers</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="4">Schedule is subject to change. Please check the notice board for updates.</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
+
+
+===========================================================
+Q8.html — Student Report Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Report</title>
+</head>
+<body>
+
+<h1>Greenwood Public School</h1>
+
+<h2>Student Report Card</h2>
+
+<table border="1" title="Marks Table for 5 Subjects">
+  <tr>
+    <th>Subject</th>
+    <th>Marks Obtained</th>
+    <th title="Maximum marks for each subject">Out Of</th>
+  </tr>
+  <tr>
+    <td>Mathematics</td>
+    <td>92</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Science</td>
+    <td>88</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>English</td>
+    <td>85</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Computer Science</td>
+    <td>95</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Social Science</td>
+    <td>80</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="1" title="Sum of all subject marks">Total</td>
+    <td>440 / 500</td>
+  </tr>
+  <tr>
+    <td colspan="2" title="Overall percentage scored">Percentage</td>
+    <td>88%</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+===========================================================
+Q9.html — Travel Destination Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top 3 Travel Destinations</title>
+</head>
+<body>
+
+<header>
+  <h1>Top 3 Travel Destinations</h1>
+</header>
+
+<main>
+
+  <article>
+    <h2>Manali, Himachal Pradesh</h2>
+    <img src="manali.jpg" alt="Manali mountains" width="200">
+    <p>A scenic hill town known for snow-capped mountains, adventure sports, and pleasant weather.</p>
+    <blockquote>
+      "Manali felt like stepping into a postcard - peaceful and breathtaking."
+      <cite>- Travel Blogger, Riya Kapoor</cite>
+    </blockquote>
+  </article>
+
+  <article>
+    <h2>Goa</h2>
+    <img src="goa.jpg" alt="Goa beach" width="200">
+    <p>Famous for its golden beaches, vibrant nightlife, and Portuguese-era architecture.</p>
+    <blockquote>
+      "The beaches of Goa offer the perfect mix of relaxation and fun."
+      <cite>- Travel Magazine, Wanderlust India</cite>
+    </blockquote>
+  </article>
+
+  <article>
+    <h2>Jaipur, Rajasthan</h2>
+    <img src="jaipur.jpg" alt="Jaipur palace" width="200">
+    <p>Known as the Pink City, famous for majestic forts, palaces, and rich cultural heritage.</p>
+    <blockquote>
+      "Jaipur is a living museum of royal Indian history."
+      <cite>- Historian, Dr. Ashok Sharma</cite>
+    </blockquote>
+  </article>
+
+</main>
+
+<aside>
+  <h3>Travel Tips</h3>
+  <ul>
+    <li>Book tickets in advance during peak season</li>
+    <li>Carry a valid ID proof at all times</li>
+    <li>Check local weather before packing</li>
+    <li>Keep emergency contacts handy</li>
+  </ul>
+</aside>
+
+<footer>
+  <p>&copy; 2025 Travel Diaries. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q10.html — Dropdown-based Selection Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Preference Selector</title>
+</head>
+<body>
+
+<h1>Select Your Travel Preferences</h1>
+
+<form>
+
+  <label for="country">Country:</label>
+  <select id="country" name="country">
+    <option value="usa">USA</option>
+    <option value="india" selected>India</option>
+    <option value="japan">Japan</option>
+  </select><br><br>
+
+  <label for="state">State:</label>
+  <select id="state" name="state">
+    <option value="delhi">Delhi</option>
+    <option value="rajasthan" selected>Rajasthan</option>
+    <option value="kerala">Kerala</option>
+  </select><br><br>
+
+  <label for="city">City:</label>
+  <select id="city" name="city">
+    <option value="jaipur" selected>Jaipur</option>
+    <option value="udaipur">Udaipur</option>
+    <option value="jodhpur">Jodhpur</option>
+  </select><br><br>
+
+  <label for="place">Favorite Tourist Place:</label>
+  <select id="place" name="place">
+    <option value="hawamahal" selected>Hawa Mahal</option>
+    <option value="citypalace">City Palace</option>
+    <option value="amberfort">Amber Fort</option>
+  </select>
+
+</form>
+
+<p>You have selected India, Rajasthan, Jaipur, and your favorite tourist place is Hawa Mahal.</p>
+
+</body>
+</html>
+
+
+===========================================================
+Q11.html — News Layout Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily News Hub</title>
+</head>
+<body>
+
+<header>
+  <h1>Daily News Hub</h1>
+</header>
+
+<nav>
+  <a href="#sports">Sports</a>
+  <a href="#technology">Technology</a>
+  <a href="#politics">Politics</a>
+</nav>
+
+<main>
+
+  <article id="sports">
+    <h2>India Wins Series Against Australia</h2>
+    <time datetime="2025-11-10">November 10, 2025</time>
+    <p>The Indian cricket team clinched the series 3-2 in a thrilling final match.</p>
+    <p>Source: <a href="https://example.com/sports-news">SportsDaily.com</a></p>
+  </article>
+
+  <article id="technology">
+    <h2>New AI Chip Announced by Tech Giant</h2>
+    <time datetime="2025-11-09">November 9, 2025</time>
+    <p>The new chip promises faster processing speeds for AI-based applications.</p>
+    <p>Source: <a href="https://example.com/tech-news">TechToday.com</a></p>
+  </article>
+
+  <article id="politics">
+    <h2>Parliament Passes New Digital Privacy Bill</h2>
+    <time datetime="2025-11-08">November 8, 2025</time>
+    <p>The bill aims to strengthen data protection laws for citizens.</p>
+    <p>Source: <a href="https://example.com/politics-news">NationNews.com</a></p>
+  </article>
+
+</main>
+
+<aside>
+  <h3>Popular Topics</h3>
+  <ul>
+    <li>Cricket World Cup</li>
+    <li>Artificial Intelligence</li>
+    <li>Government Policies</li>
+    <li>Climate Change</li>
+  </ul>
+</aside>
+
+<footer>
+  <p>Contact: news@dailynewshub.com | &copy; 2025 Daily News Hub. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q12.html — Quotation Showcase Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotation Showcase</title>
+</head>
+<body>
+
+<h1>Inspiring Quotes</h1>
+
+<section>
+  <h2>On Dreams</h2>
+  <blockquote>
+    "The future belongs to those who believe in the beauty of their dreams."
+    <cite>- Eleanor Roosevelt</cite>
+  </blockquote>
+</section>
+
+<section>
+  <h2>On Perseverance</h2>
+  <blockquote>
+    "Success is not final, failure is not fatal: it is the courage to continue that counts."
+    <cite>- Winston Churchill</cite>
+  </blockquote>
+</section>
+
+<section>
+  <h2>On Simplicity</h2>
+  <blockquote>
+    "Simplicity is the ultimate sophistication."
+    <cite>- Leonardo da Vinci</cite>
+  </blockquote>
+</section>
+
+<p>Quotes inspire people because they capture powerful ideas in a few words, offering motivation, perspective, and wisdom drawn from the experiences of great thinkers.</p>
+
+</body>
+</html>
+
+
+===========================================================
+Q13.html — Blog Layout Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+</head>
+<body>
+
+<header>
+  <h1>Sarthak's Blog</h1>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#blogs">Blogs</a>
+  <a href="#about">About</a>
+</nav>
+
+<main>
+
+  <article>
+    <h2>My First Blog</h2>
+    <time datetime="2025-11-01">November 1, 2025</time>
+    <p>This is my very first blog post. I am excited to start documenting my learning journey in web development.</p>
+    <blockquote>
+      "Every expert was once a beginner."
+      <cite>- Unknown</cite>
+    </blockquote>
+  </article>
+
+  <article>
+    <h2>Things I Learned This Week</h2>
+    <time datetime="2025-11-08">November 8, 2025</time>
+    <p>This week I learned about HTML block and inline elements, semantic tags, and how to structure a webpage properly.</p>
+    <blockquote>
+      "Learning never exhausts the mind."
+      <cite>- Leonardo da Vinci</cite>
+    </blockquote>
+  </article>
+
+</main>
+
+<footer>
+  <p>Written by Sarthak Singh Rathore</p>
+</footer>
+
+</body>
+</html>
+
+
+===========================================================
+Q14.html — Movie Database Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Database</title>
+</head>
+<body>
+
+<h1>Movie Database</h1>
+
+<table border="1" title="List of popular movies">
+  <caption>Top Rated Movies</caption>
+  <tr>
+    <th>Movie Name</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>IMDB Rating</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>Inception</td>
+    <td>Sci-Fi</td>
+    <td>2010</td>
+    <td>8.8</td>
+    <td><a href="https://www.imdb.com/title/tt1375666/">View</a></td>
+  </tr>
+  <tr>
+    <td>The Dark Knight</td>
+    <td>Action</td>
+    <td>2008</td>
+    <td>9.0</td>
+    <td><a href="https://www.imdb.com/title/tt0468569/">View</a></td>
+  </tr>
+  <tr>
+    <td colspan="4" title="Combined entry for trilogy">The Lord of the Rings Trilogy</td>
+    <td><a href="https://www.imdb.com/title/tt0120737/">View</a></td>
+  </tr>
+</table>
+
+<small>Note: Ratings are approximate and subject to change based on IMDB updates.</small>
+
+</body>
+</html>
+
+
+===========================================================
+Q15.html — Portfolio Layout Page
+===========================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+</head>
+<body>
+
+<header>
+  <h1>Sarthak Singh Rathore</h1>
+  <p>Cybersecurity Student &amp; Web Developer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a cybersecurity student who enjoys building websites and exploring new technologies.</p>
+    <blockquote>
+      "Stay curious, stay secure."
+      <cite>- Sarthak Singh Rathore</cite>
+    </blockquote>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML &amp; CSS</li>
+      <li>Python</li>
+      <li>Network Security</li>
+      <li>Problem Solving</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <table border="1">
+      <tr>
+        <th>Project Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Portfolio Website</td>
+        <td>A personal website showcasing my skills and projects</td>
+      </tr>
+      <tr>
+        <td>Network Scanner</td>
+        <td>A basic tool to scan local network devices</td>
+      </tr>
+    </table>
+  </section>
+
+</main>
+
+<aside>
+  <h3>Contact Info</h3>
+  <p>Email: sarthak@example.com</p>
+  <p>Phone: +91-9876543210</p>
+  <p><a href="https://linkedin.com/in/sarthaksinghrathore">LinkedIn Profile</a></p>
+</aside>
+
+<footer>
+  <p>&copy; 2025 Sarthak Singh Rathore. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
