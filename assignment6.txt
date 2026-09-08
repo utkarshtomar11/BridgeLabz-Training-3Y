@@ -1,0 +1,806 @@
+===================================================
+QUESTION 1 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<link rel="stylesheet" href="q1.css.txt">
+</head>
+<body>
+<header class="header">
+  <div class="name">Utkarsh Tomar</div>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="main">
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am a student passionate about web development and cybersecurity. I love building responsive layouts using Flexbox and Grid.</p>
+  </section>
+  <section class="image-section">
+    <img src="https://via.placeholder.com/300" alt="Profile">
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Utkarsh Tomar. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+===================================================
+QUESTION 1 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+.nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.about, .image-section {
+  flex: 1;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .header { flex-direction: column; text-align: center; }
+  .main { flex-direction: column; }
+}
+
+
+===================================================
+QUESTION 2 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Gallery</title>
+<link rel="stylesheet" href="q2.css.txt">
+</head>
+<body>
+<div class="grid">
+  <div class="card"><h3>Product 1</h3><p>$10</p></div>
+  <div class="card"><h3>Product 2</h3><p>$20</p></div>
+  <div class="card"><h3>Product 3</h3><p>$30</p></div>
+  <div class="card"><h3>Product 4</h3><p>$40</p></div>
+  <div class="card"><h3>Product 5</h3><p>$50</p></div>
+  <div class="card"><h3>Product 6</h3><p>$60</p></div>
+  <div class="card"><h3>Product 7</h3><p>$70</p></div>
+  <div class="card"><h3>Product 8</h3><p>$80</p></div>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 2 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+
+===================================================
+QUESTION 3 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Homepage</title>
+<link rel="stylesheet" href="q3.css.txt">
+</head>
+<body>
+<header class="header">
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Projects</a>
+  <a href="#">Contact</a>
+</header>
+
+<main class="main">
+  <div class="box">Services</div>
+  <div class="box">Projects</div>
+  <div class="box">Contact</div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 My Homepage</p>
+</footer>
+</body>
+</html>
+
+===================================================
+QUESTION 3 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { display: flex; flex-direction: column; min-height: 100vh; font-family: Arial, sans-serif; }
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background: #333;
+  padding: 15px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.box {
+  flex: 1;
+  background: #eee;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: rotate(2deg);
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .main { flex-direction: column; }
+}
+
+
+===================================================
+QUESTION 4 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="q4.css.txt">
+</head>
+<body>
+<div class="dashboard">
+  <header class="header">Dashboard Header</header>
+  <aside class="sidebar">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+  <main class="content">
+    <div class="box wide">Box 1 (spans 2 columns)</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </main>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 4 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  min-height: 100vh;
+  grid-gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #444;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar nav { display: flex; flex-direction: column; gap: 10px; }
+.sidebar a { color: #fff; text-decoration: none; }
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.box {
+  background: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.box.wide {
+  grid-column: span 2;
+}
+
+
+===================================================
+QUESTION 5 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing</title>
+<link rel="stylesheet" href="q5.css.txt">
+</head>
+<body>
+<div class="pricing">
+  <div class="card">
+    <h3>Basic</h3>
+    <p>$9/mo</p>
+  </div>
+  <div class="card highlight">
+    <h3>Pro</h3>
+    <p>$19/mo</p>
+  </div>
+  <div class="card">
+    <h3>Premium</h3>
+    <p>$29/mo</p>
+  </div>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 5 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 40px; }
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 250px;
+  transition: transform 0.3s;
+  animation: fadeIn 1s ease-in;
+}
+
+.card.highlight {
+  background: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card.highlight:hover {
+  transform: scale(1.1) translateY(-10px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 750px) {
+  .pricing { flex-direction: column; }
+  .card.highlight { transform: none; }
+}
+
+
+===================================================
+QUESTION 6 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog</title>
+<link rel="stylesheet" href="q6.css.txt">
+</head>
+<body>
+<div class="blog-layout">
+  <header class="header">
+    <h1>My Blog</h1>
+    <nav><a href="#">Home</a> <a href="#">Archive</a></nav>
+  </header>
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li>Tech</li>
+      <li>Cybersecurity</li>
+      <li>Lifestyle</li>
+    </ul>
+  </aside>
+  <main class="content">
+    <article class="post">Blog Post 1 content goes here.</article>
+    <article class="post">Blog Post 2 content goes here.</article>
+  </main>
+  <footer class="footer">Contact: info@blog.com</footer>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 6 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  gap: 15px;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+}
+
+.header nav a { color: #fff; margin-left: 10px; text-decoration: none; }
+
+.sidebar {
+  grid-area: sidebar;
+  background: #f4f4f4;
+  padding: 15px;
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.post {
+  background: #eee;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (max-width: 800px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+  .content { grid-template-columns: 1fr; }
+}
+
+
+===================================================
+QUESTION 7 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading Animation</title>
+<link rel="stylesheet" href="q7.css.txt">
+</head>
+<body>
+<div class="loader">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 7 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.loader {
+  display: flex;
+  gap: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00e0ff;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.c1 { animation-delay: 0s; }
+.c2 { animation-delay: 0.2s; }
+.c3 { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+
+===================================================
+QUESTION 8 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Gallery</title>
+<link rel="stylesheet" href="q8.css.txt">
+</head>
+<body>
+<div class="gallery">
+  <figure>
+    <img src="https://via.placeholder.com/300" alt="Photo 1">
+    <figcaption>Photo 1</figcaption>
+  </figure>
+  <figure>
+    <img src="https://via.placeholder.com/300" alt="Photo 2">
+    <figcaption>Photo 2</figcaption>
+  </figure>
+  <figure>
+    <img src="https://via.placeholder.com/300" alt="Photo 3">
+    <figcaption>Photo 3</figcaption>
+  </figure>
+  <figure>
+    <img src="https://via.placeholder.com/300" alt="Photo 4">
+    <figcaption>Photo 4</figcaption>
+  </figure>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 8 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+figcaption {
+  padding: 8px;
+  background: #f4f4f4;
+}
+
+
+===================================================
+QUESTION 9 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Card Flip</title>
+<link rel="stylesheet" href="q9.css.txt">
+</head>
+<body>
+<div class="scene">
+  <div class="card">
+    <div class="card-face card-front">
+      <img src="https://via.placeholder.com/150" alt="Front">
+      <h3>Title</h3>
+    </div>
+    <div class="card-face card-back">
+      <p>This is the description shown on the back of the card.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+===================================================
+QUESTION 9 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.scene {
+  perspective: 1000px;
+}
+
+.card {
+  width: 220px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.scene:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-front {
+  background: #eee;
+}
+
+.card-back {
+  background: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+
+===================================================
+QUESTION 10 - HTML
+===================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Combined Layout</title>
+<link rel="stylesheet" href="q10.css.txt">
+</head>
+<body>
+<header class="header">
+  <div class="logo">MyLogo</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main class="main">
+  <article class="article">
+    <h1 class="fade-title">Article Title</h1>
+    <div class="article-boxes">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </article>
+  <aside class="sidebar">Sidebar content</aside>
+</main>
+
+<footer class="footer">&copy; 2026 My Website</footer>
+</body>
+</html>
+
+===================================================
+QUESTION 10 - CSS
+===================================================
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #222;
+  color: #fff;
+}
+
+.header nav a { color: #fff; margin-left: 15px; text-decoration: none; }
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.article-boxes {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.box {
+  flex: 1;
+  background: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sidebar {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.fade-title {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .main { grid-template-columns: 1fr; }
+  .article-boxes { flex-direction: column; }
+}
+
+
