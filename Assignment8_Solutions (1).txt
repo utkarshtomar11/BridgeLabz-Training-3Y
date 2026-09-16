@@ -1,0 +1,929 @@
+
+Q1. Create a Webpage Demonstrating Pseudo-Classes
+====================================================================
+
+--- q1.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="q1.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Pseudo-Classes Demonstration</h1>
+  </header>
+  <main>
+    <section class="demo-row">
+      <div class="demo-item">
+        <a href="#" class="hover-link">Hover Me (Link)</a>
+        <p>:hover changes color/background on mouse over.</p>
+      </div>
+      <div class="demo-item">
+        <button class="focus-btn">Click / Tab to Focus</button>
+        <p>:focus highlights the element when selected via click/keyboard.</p>
+      </div>
+      <div class="demo-item">
+        <button class="active-btn">Press Me</button>
+        <p>:active shows the state while the button is being pressed.</p>
+      </div>
+      <div class="demo-item">
+        <ul class="nth-list">
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+          <li>Item Four</li>
+        </ul>
+        <p>:nth-child(even) highlights alternate list items.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 1</p>
+  </footer>
+</body>
+</html>
+
+--- q1.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 20px; }
+header, footer { text-align: center; padding: 15px; }
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.demo-item {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+}
+
+/* :hover - changes background/color on mouse over */
+.hover-link {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+.hover-link:hover {
+  color: #ffffff;
+  background: #3498db;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* :focus - highlights element when selected */
+.focus-btn {
+  padding: 8px 14px;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+.focus-btn:focus {
+  outline: none;
+  border-color: #e74c3c;
+  background: #fdecea;
+}
+
+/* :active - state while button is pressed */
+.active-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+.active-btn:active {
+  background: #27ae60;
+  transform: scale(0.95);
+}
+
+/* :nth-child() - alternate list item highlighting */
+.nth-list { list-style: none; }
+.nth-list li {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+.nth-list li:nth-child(even) {
+  background: #dff9fb;
+}
+.nth-list li:nth-child(odd) {
+  background: #ffffff;
+}
+
+
+====================================================================
+Q2. Design a Tooltip Demonstration Page
+====================================================================
+
+--- q2.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltip Demo</title>
+  <link rel="stylesheet" href="q2.css">
+</head>
+<body>
+  <header>
+    <h1>CSS-Only Tooltip Demonstration</h1>
+  </header>
+  <main class="tooltip-container">
+    <span class="tooltip-item">
+      Hover Me
+      <span class="tooltip-text">This is a simple tooltip</span>
+    </span>
+    <span class="tooltip-item">
+      Info Icon
+      <span class="tooltip-text">Additional information here</span>
+    </span>
+    <span class="tooltip-item">
+      Settings
+      <span class="tooltip-text">Open settings menu</span>
+    </span>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 2</p>
+  </footer>
+</body>
+</html>
+
+--- q2.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.tooltip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  min-height: 60vh;
+}
+
+.tooltip-item {
+  position: relative;
+  padding: 12px 20px;
+  background: #34495e;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-item:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+====================================================================
+Q3. Create an Image Showcase Layout
+====================================================================
+
+--- q3.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Showcase</title>
+  <link rel="stylesheet" href="q3.css">
+</head>
+<body>
+  <header>
+    <h1>Image Showcase Gallery</h1>
+  </header>
+  <main class="gallery">
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?1" alt="Image 1"></div>
+      <figcaption>Mountain View</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?2" alt="Image 2"></div>
+      <figcaption>Ocean Breeze</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?3" alt="Image 3"></div>
+      <figcaption>Forest Trail</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?4" alt="Image 4"></div>
+      <figcaption>City Lights</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?5" alt="Image 5"></div>
+      <figcaption>Desert Sunset</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="img-wrap"><img src="https://picsum.photos/300/200?6" alt="Image 6"></div>
+      <figcaption>Snowy Peaks</figcaption>
+    </figure>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 3</p>
+  </footer>
+</body>
+</html>
+
+--- q3.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  background: #fff;
+}
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .img-wrap img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .img-wrap::after {
+  opacity: 1;
+}
+
+.gallery-item figcaption {
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+====================================================================
+Q4. Build a CSS Selectors Practice Page
+====================================================================
+
+--- q4.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+  </header>
+  <main>
+    <p>This paragraph is styled using an <strong>element selector</strong>.</p>
+    <p class="highlight">This paragraph uses a <strong>class selector</strong>.</p>
+    <p id="unique">This paragraph uses an <strong>ID selector</strong>.</p>
+
+    <a href="https://example.com" target="_blank">External Link (attribute selector)</a>
+
+    <div class="combinator-demo">
+      <p>Direct child paragraph (used with &gt; combinator)</p>
+      <span>Adjacent sibling span (used with + combinator)</span>
+      <p>General sibling paragraph (used with ~ combinator)</p>
+      <section>
+        <p>Descendant paragraph inside section</p>
+      </section>
+    </div>
+
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 4</p>
+  </footer>
+</body>
+</html>
+
+--- q4.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; padding: 20px; }
+header, footer { text-align: center; padding: 15px; background: #ecf0f1; }
+main { padding: 20px; max-width: 700px; margin: 0 auto; }
+
+/* Element selector - targets all <p> tags */
+p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Class selector - targets elements with class="highlight" */
+.highlight {
+  background: #fff3cd;
+  padding: 5px;
+}
+
+/* ID selector - targets the single element with id="unique" */
+#unique {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Attribute selector - targets links opening in a new tab */
+a[target="_blank"] {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Child combinator (>) - direct child <p> of .combinator-demo */
+.combinator-demo > p {
+  color: #27ae60;
+}
+
+/* Adjacent sibling combinator (+) - span immediately after a p */
+.combinator-demo p + span {
+  color: #8e44ad;
+  font-style: italic;
+}
+
+/* General sibling combinator (~) - any p sibling after the span */
+.combinator-demo span ~ p {
+  color: #d35400;
+}
+
+/* Descendant combinator (space) - any p inside section, at any depth */
+.combinator-demo section p {
+  font-weight: bold;
+  background: #f4f4f4;
+  padding: 4px;
+}
+
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+
+====================================================================
+Q5. Design a Styled Button Collection
+====================================================================
+
+--- q5.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Collection</title>
+  <link rel="stylesheet" href="q5.css">
+</head>
+<body>
+  <header>
+    <h1>Styled Button Collection</h1>
+  </header>
+  <main class="btn-row">
+    <button class="btn primary">Primary</button>
+    <button class="btn secondary">Secondary</button>
+    <button class="btn outline">Outline</button>
+    <button class="btn" disabled>Disabled</button>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 5</p>
+  </footer>
+</body>
+</html>
+
+--- q5.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.btn-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.25s ease-in-out;
+}
+
+.primary {
+  background: #3498db;
+  color: white;
+}
+.primary:hover { background: #2980b9; }
+.primary:active { transform: scale(0.96); }
+.primary:focus { outline: 3px solid #a9d6f5; }
+
+.secondary {
+  background: #95a5a6;
+  color: white;
+}
+.secondary:hover { background: #7f8c8d; }
+.secondary:active { transform: scale(0.96); }
+
+.outline {
+  background: transparent;
+  border-color: #2c3e50;
+  color: #2c3e50;
+}
+.outline:hover { background: #2c3e50; color: white; }
+
+.btn:disabled {
+  background: #ecf0f1;
+  color: #bdc3c7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+====================================================================
+Q6. Create a CSS Animation Demonstration Page
+====================================================================
+
+--- q6.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animation Demo</title>
+  <link rel="stylesheet" href="q6.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Animation Demonstration</h1>
+  </header>
+  <main class="animation-stage">
+    <div class="moving-box"></div>
+    <div class="bouncing-ball"></div>
+    <div class="color-text">Changing Color</div>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 6</p>
+  </footer>
+</body>
+</html>
+
+--- q6.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.animation-stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 70vh;
+}
+
+/* Moving box */
+.moving-box {
+  width: 60px;
+  height: 60px;
+  background: #3498db;
+  animation: moveBox 2s ease-in-out infinite alternate;
+}
+@keyframes moveBox {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(100px); }
+}
+
+/* Bouncing ball */
+.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e74c3c;
+  animation: bounce 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+/* Color-changing text */
+.color-text {
+  font-size: 24px;
+  font-weight: bold;
+  animation: colorChange 3s ease-in-out infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes colorChange {
+  0%   { color: #e74c3c; }
+  33%  { color: #2ecc71; }
+  66%  { color: #3498db; }
+  100% { color: #9b59b6; }
+}
+
+
+====================================================================
+Q7. Design a User Interface Components Page
+====================================================================
+
+--- q7.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Components</title>
+  <link rel="stylesheet" href="q7.css">
+</head>
+<body>
+  <header>
+    <h1>User Interface Components</h1>
+  </header>
+  <main class="ui-card">
+    <input type="text" class="search-bar" placeholder="Search here...">
+    <div class="button-group">
+      <button class="ui-btn">Submit</button>
+      <button class="ui-btn secondary">Cancel</button>
+    </div>
+    <select class="dropdown">
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 7</p>
+  </footer>
+</body>
+</html>
+
+--- q7.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+}
+header, footer { text-align: center; padding: 15px; }
+
+.ui-card {
+  max-width: 350px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-bar {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.search-bar:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52,152,219,0.6);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.ui-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+.ui-btn:hover { background: #2980b9; }
+.ui-btn.secondary { background: #95a5a6; }
+.ui-btn.secondary:hover { background: #7f8c8d; }
+
+.dropdown {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.dropdown:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+
+====================================================================
+Q8. Build a Box-Sizing Comparison Page
+====================================================================
+
+--- q8.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+  </header>
+  <main class="compare-row">
+    <div class="box content-box">
+      <h3>content-box (default)</h3>
+      <p>Width 200px + padding 20px = total 240px actual width.</p>
+    </div>
+    <div class="box border-box">
+      <h3>border-box</h3>
+      <p>Width stays exactly 200px; padding is included inside it.</p>
+    </div>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 8</p>
+  </footer>
+</body>
+</html>
+
+--- q8.css ---
+* { margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.compare-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.content-box {
+  box-sizing: content-box;
+  background: #e74c3c;
+}
+
+.border-box {
+  box-sizing: border-box;
+  background: #27ae60;
+}
+
+@media (max-width: 700px) {
+  .compare-row { flex-direction: column; align-items: center; }
+}
+
+
+====================================================================
+Q9. Create a Combined Effects Demonstration Page
+====================================================================
+
+--- q9.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Effects Demo</title>
+  <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+  <header>
+    <h1>Combined Effects: Pseudo-Classes + Transitions + Transforms</h1>
+  </header>
+  <main class="effects-row">
+    <button class="fx-btn">Grow &amp; Glow</button>
+    <button class="fx-btn">Hover Me</button>
+    <button class="fx-btn">Try This</button>
+    <button class="fx-btn">And This</button>
+  </main>
+  <footer>
+    <p>Assignment 8 - Question 9</p>
+  </footer>
+</body>
+</html>
+
+--- q9.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; }
+header, footer { text-align: center; padding: 15px; }
+
+.effects-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 60vh;
+}
+
+.fx-btn {
+  padding: 14px 26px;
+  border: none;
+  border-radius: 8px;
+  background: #9b59b6;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.fx-btn:hover {
+  transform: scale(1.12);
+  background: #8e44ad;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.fx-btn:active {
+  transform: scale(0.95);
+}
+
+
+====================================================================
+Q10. Design a Complete Mini User Interface Layout
+====================================================================
+
+--- q10.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini UI Layout</title>
+  <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>My Mini App</h1>
+  </header>
+
+  <main class="main-card">
+    <img src="https://picsum.photos/300/150" alt="Profile" class="card-img">
+    <form class="app-form">
+      <input type="text" placeholder="Your name" class="form-input">
+      <input type="email" placeholder="Your email" class="form-input">
+      <div class="form-buttons">
+        <button type="submit" class="form-btn primary">Save</button>
+        <button type="button" class="form-btn secondary">Cancel</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Mini UI - Assignment 8, Question 10</p>
+  </footer>
+</body>
+</html>
+
+--- q10.css ---
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+.main-card {
+  flex: 1;
+  max-width: 380px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.app-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52,152,219,0.5);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.form-btn:hover { transform: translateY(-2px); }
+.form-btn.primary { background: #3498db; color: white; }
+.form-btn.primary:hover { background: #2980b9; }
+.form-btn.secondary { background: #ecf0f1; color: #2c3e50; }
+.form-btn.secondary:hover { background: #dcdde1; }
+
+.app-footer {
+  text-align: center;
+  padding: 14px;
+  background: #2c3e50;
+  color: white;
+}
+
+====================================================================
+END OF ASSIGNMENT 8 SOLUTIONS
+====================================================================
