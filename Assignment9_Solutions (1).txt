@@ -1,0 +1,1006 @@
+====================================================================
+ASSIGNMENT 9 - RESPONSIVE CSS - FULL SOLUTIONS
+====================================================================
+Note: As per instructions, each question should ideally be a SEPARATE
+html + css file (e.g. q1.html + q1style.css, q2.html + q2style.css...).
+Below, each question's HTML and CSS are clearly separated and labeled
+so you can copy them into their own files easily.
+====================================================================
+
+
+####################################################################
+Q1. RESPONSIVE IMAGE FILTER GALLERY
+####################################################################
+
+---------------- FILE: q1.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q1 - Image Filter Gallery</title>
+<link rel="stylesheet" href="q1.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Responsive Image Filter Gallery</h1>
+  </header>
+
+  <!-- Main gallery grid -->
+  <main class="gallery">
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1015/400/300" alt="Image 1" class="blur">
+      <figcaption>Blur Effect</figcaption>
+    </figure>
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1016/400/300" alt="Image 2" class="grayscale">
+      <figcaption>Grayscale Effect</figcaption>
+    </figure>
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1018/400/300" alt="Image 3" class="sepia">
+      <figcaption>Sepia Effect</figcaption>
+    </figure>
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1019/400/300" alt="Image 4" class="brightness">
+      <figcaption>Brightness Effect</figcaption>
+    </figure>
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1020/400/300" alt="Image 5" class="contrast">
+      <figcaption>Contrast Effect</figcaption>
+    </figure>
+    <figure class="img-box">
+      <img src="https://picsum.photos/id/1021/400/300" alt="Image 6" class="hue">
+      <figcaption>Hue-Rotate Effect</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Filter Gallery</p>
+  </footer>
+</body>
+</html>
+
+---------------- FILE: q1.css ----------------
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+/* Grid layout - auto-fit responsive columns */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.img-box {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.img-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+/* Individual filters */
+.blur       { filter: blur(3px); }
+.grayscale  { filter: grayscale(100%); }
+.sepia      { filter: sepia(100%); }
+.brightness { filter: brightness(1.6); }
+.contrast   { filter: contrast(2); }
+.hue        { filter: hue-rotate(120deg); }
+
+/* Remove filter smoothly on hover */
+.img-box img:hover {
+  filter: none;
+}
+
+.img-box figcaption {
+  padding: 0.6rem;
+  font-weight: bold;
+}
+
+/* Stack into single column below 600px */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+####################################################################
+Q2. RESPONSIVE WEB DESIGN LAYOUT (FLEXBOX)
+####################################################################
+
+---------------- FILE: q2.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q2 - Responsive Homepage Layout</title>
+<link rel="stylesheet" href="q2.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">MyBrand</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="features">
+    <section class="feature-box">
+      <h2>Feature One</h2>
+      <p>Description of feature one goes here.</p>
+    </section>
+    <section class="feature-box">
+      <h2>Feature Two</h2>
+      <p>Description of feature two goes here.</p>
+    </section>
+    <section class="feature-box">
+      <h2>Feature Three</h2>
+      <p>Description of feature three goes here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MyBrand. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+---------------- FILE: q2.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; }
+
+/* Header: logo left, nav right */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #2c3e50;
+  color: #fff;
+}
+
+.site-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Feature boxes horizontal */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.feature-box {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+/* Footer centered */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* Stack below 750px */
+@media (max-width: 750px) {
+  .features {
+    flex-direction: column;
+  }
+  .site-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+
+####################################################################
+Q3. RESPONSIVE CARDS WITH MEDIA QUERIES
+####################################################################
+
+---------------- FILE: q3.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q3 - Responsive Cards</title>
+<link rel="stylesheet" href="q3.css">
+</head>
+<body>
+  <header>
+    <h1>Our Services</h1>
+  </header>
+
+  <main class="card-row">
+    <section class="card">
+      <h3>Card 1</h3>
+      <p>Some content for card one.</p>
+    </section>
+    <section class="card">
+      <h3>Card 2</h3>
+      <p>Some content for card two.</p>
+    </section>
+    <section class="card">
+      <h3>Card 3</h3>
+      <p>Some content for card three.</p>
+    </section>
+    <section class="card">
+      <h3>Card 4</h3>
+      <p>Some content for card four.</p>
+    </section>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q3.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #fafafa; }
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #34495e;
+  color: #fff;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 2rem;
+}
+
+.card {
+  flex: 1 1 22%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+
+.card:hover {
+  background-color: #d0e8f2;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+
+####################################################################
+Q4. RESPONSIVE TYPOGRAPHY
+####################################################################
+
+---------------- FILE: q4.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q4 - Responsive Typography</title>
+<link rel="stylesheet" href="q4.css">
+</head>
+<body>
+  <main>
+    <section class="type-section">
+      <h1>Fluid Typography with clamp()</h1>
+      <p>
+        This paragraph demonstrates responsive typography using the
+        CSS clamp() function. The font size automatically scales
+        between a minimum and maximum value based on the viewport
+        width, ensuring readable text on every screen size without
+        needing multiple media queries just for font sizing.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q4.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, serif;
+  background: #fff8f0;
+}
+
+.type-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Adjust spacing/line-height for smaller screens */
+@media (max-width: 700px) {
+  p {
+    line-height: 1.9;
+  }
+  .type-section {
+    padding: 2rem 1rem;
+  }
+}
+
+
+####################################################################
+Q5. FILTER CARDS WITH ANIMATION
+####################################################################
+
+---------------- FILE: q5.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q5 - Filter Cards with Animation</title>
+<link rel="stylesheet" href="q5.css">
+</head>
+<body>
+  <header>
+    <h1>Meet the Team</h1>
+  </header>
+
+  <main class="profile-row">
+    <section class="profile-card">
+      <img src="https://picsum.photos/id/1005/300/300" alt="Person 1">
+      <h3>Aarav Sharma</h3>
+      <p>Frontend Developer</p>
+    </section>
+    <section class="profile-card">
+      <img src="https://picsum.photos/id/1011/300/300" alt="Person 2">
+      <h3>Isha Verma</h3>
+      <p>UI/UX Designer</p>
+    </section>
+    <section class="profile-card">
+      <img src="https://picsum.photos/id/1027/300/300" alt="Person 3">
+      <h3>Rohan Gupta</h3>
+      <p>Backend Developer</p>
+    </section>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q5.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f0f0f0; }
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.profile-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.profile-card:hover img {
+  filter: none;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Fade-in keyframe animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Stack vertically below 800px */
+@media (max-width: 800px) {
+  .profile-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+####################################################################
+Q6. RESPONSIVE CSS CHEAT SHEET
+####################################################################
+
+---------------- FILE: q6.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q6 - Responsive CSS Cheat Sheet</title>
+<link rel="stylesheet" href="q6.css">
+</head>
+<body>
+  <header>
+    <h1>Responsive CSS Cheat Sheet</h1>
+  </header>
+
+  <main class="cheat-grid">
+    <section class="cheat-box">
+      <h2>Filters</h2>
+      <p>Apply visual effects like blur(), grayscale(), sepia() to images.</p>
+    </section>
+    <section class="cheat-box">
+      <h2>Media Queries</h2>
+      <p>@media (max-width: 600px) applies styles conditionally by screen size.</p>
+    </section>
+    <section class="cheat-box">
+      <h2>Responsive Design</h2>
+      <p>Layouts adapt fluidly to any device using Flexbox/Grid and relative units.</p>
+    </section>
+    <section class="cheat-box">
+      <h2>Typography</h2>
+      <p>clamp() lets font sizes scale smoothly between min and max values.</p>
+    </section>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q6.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Courier New', monospace; background: #1e1e2f; color: #eee; }
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #11111f;
+}
+
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 2rem;
+}
+
+.cheat-box {
+  background: #2a2a40;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cheat-box:hover {
+  background: #3b3b5c;
+  transform: translateY(-4px);
+}
+
+.cheat-box h2 {
+  color: #f1c40f;
+  margin-bottom: 0.5rem;
+}
+
+/* Large screens: adjust to 2 columns for medium widths */
+@media (max-width: 1000px) {
+  .cheat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: stacked rows, heading acts as key, text as value */
+@media (max-width: 700px) {
+  .cheat-grid {
+    grid-template-columns: 1fr;
+  }
+  .cheat-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .cheat-box h2::after {
+    content: " :";
+  }
+}
+
+
+####################################################################
+Q7. COMBINED RESPONSIVE WEB DEMO
+####################################################################
+
+---------------- FILE: q7.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q7 - Combined Responsive Demo</title>
+<link rel="stylesheet" href="q7.css">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="logo">DemoSite</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-grid">
+    <section class="gallery-preview">
+      <h2>Image Gallery</h2>
+      <div class="mini-gallery">
+        <img src="https://picsum.photos/id/1035/150/100" alt="img1">
+        <img src="https://picsum.photos/id/1036/150/100" alt="img2">
+        <img src="https://picsum.photos/id/1037/150/100" alt="img3">
+      </div>
+    </section>
+
+    <section class="text-explanation">
+      <h2>What is Responsive Design?</h2>
+      <p>Responsive design ensures webpages adapt smoothly across
+      different screen sizes using flexible grids, media queries,
+      and scalable typography.</p>
+    </section>
+
+    <section class="cheat-preview">
+      <h2>Cheat Sheet Preview</h2>
+      <p>Flexbox, Grid, clamp(), and media queries are the core
+      tools for building responsive layouts.</p>
+    </section>
+  </main>
+
+  <footer class="contact-footer">
+    <p>Contact us: info@demosite.com</p>
+  </footer>
+</body>
+</html>
+
+---------------- FILE: q7.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; animation: fadeIn 1s ease-in; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #16213e;
+  color: #fff;
+}
+
+.top-nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.top-nav nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-nav nav a:hover {
+  color: #f1c40f;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.content-grid section {
+  background: #f4f4f4;
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.mini-gallery {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mini-gallery img {
+  width: 100px;
+  border-radius: 4px;
+}
+
+.contact-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #16213e;
+  color: #fff;
+}
+
+/* Stack all sections below 700px */
+@media (max-width: 700px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .top-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+
+####################################################################
+Q8. FILTER COMPARISON LAYOUT
+####################################################################
+
+---------------- FILE: q8.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q8 - Filter Comparison</title>
+<link rel="stylesheet" href="q8.css">
+</head>
+<body>
+  <header>
+    <h1>Before &amp; After Comparison</h1>
+  </header>
+
+  <main class="compare-row">
+    <figure class="compare-box">
+      <img src="https://picsum.photos/id/1041/400/300" alt="Original">
+      <figcaption>Original</figcaption>
+    </figure>
+    <figure class="compare-box">
+      <img src="https://picsum.photos/id/1041/400/300" alt="Filtered" class="filtered">
+      <figcaption>Filtered</figcaption>
+    </figure>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q8.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #fafafa; }
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #333;
+  color: #fff;
+}
+
+.compare-row {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.compare-box {
+  text-align: center;
+}
+
+.compare-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 6px;
+  transition: filter 0.5s ease;
+}
+
+.filtered {
+  filter: brightness(0.6) contrast(1.4);
+}
+
+.compare-box img:hover {
+  filter: none;
+}
+
+/* Stack vertically below 700px */
+@media (max-width: 700px) {
+  .compare-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+####################################################################
+Q9. RESPONSIVE DESIGN PRINCIPLES SUMMARY
+####################################################################
+
+---------------- FILE: q9.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q9 - Responsive Design Principles</title>
+<link rel="stylesheet" href="q9.css">
+</head>
+<body>
+  <header>
+    <h1>Core Principles of Responsive Design</h1>
+  </header>
+
+  <main class="principles-grid">
+    <section class="principle-box">
+      <h2>Fluid Layouts</h2>
+      <p>Use percentage or fr units instead of fixed pixels.</p>
+      <pre>width: 100%;</pre>
+    </section>
+    <section class="principle-box">
+      <h2>Flexible Media</h2>
+      <p>Images and videos scale within their container.</p>
+      <pre>img { max-width: 100%; }</pre>
+    </section>
+    <section class="principle-box">
+      <h2>Breakpoints</h2>
+      <p>Apply different styles at defined screen widths.</p>
+      <pre>@media (max-width: 600px) {...}</pre>
+    </section>
+  </main>
+</body>
+</html>
+
+---------------- FILE: q9.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #eef2f3; }
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0f3460;
+  color: #fff;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.principle-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.principle-box pre {
+  background: #eee;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+.principle-box:hover {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+  color: #fff;
+}
+
+/* Single column below 600px */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+####################################################################
+Q10. RESPONSIVE DASHBOARD SUMMARY
+####################################################################
+
+---------------- FILE: q10.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q10 - Responsive Dashboard</title>
+<link rel="stylesheet" href="q10.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="dash-header">Dashboard</header>
+
+    <aside class="sidebar">
+      <ul>
+        <li>Overview</li>
+        <li>Reports</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-card">Filters</div>
+      <div class="dash-card">Typography</div>
+      <div class="dash-card">Media Queries</div>
+      <div class="dash-card">Cheat Sheet Links</div>
+    </main>
+  </div>
+</body>
+</html>
+
+---------------- FILE: q10.css ----------------
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; }
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+.dash-header {
+  grid-area: header;
+  background: #0d1b2a;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+  animation: slideDown 0.6s ease;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #1b263b;
+  color: #fff;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.dash-main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.dash-card {
+  background: #e0e1dd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dash-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Sidebar shifts to top, content stacks below on smaller screens */
+@media (max-width: 750px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+  .dash-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+====================================================================
+END OF FILE
+====================================================================

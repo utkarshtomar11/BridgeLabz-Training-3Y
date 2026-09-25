@@ -1,0 +1,773 @@
+
+Q1. COMPANY LANDING PAGE (INTRO TO BOOTSTRAP)
+####################################################################
+
+---------------- FILE: q1.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q1 - Company Landing Page</title>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q1.css">
+</head>
+<body>
+
+  <!-- Full-width header with navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">NovaTech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <main>
+    <section class="hero bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Build Faster with NovaTech</h1>
+        <p class="lead">All-in-one platform to launch your startup idea in days, not months.</p>
+        <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
+      </div>
+    </section>
+
+    <!-- container/row/col layout demo -->
+    <section class="container my-5">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <h4>Fast Setup</h4>
+          <p>Get your project running in minutes using our starter kits.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Scalable</h4>
+          <p>Built on infrastructure that grows with your business.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Secure</h4>
+          <p>Enterprise-grade security baked into every layer.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 NovaTech Inc.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q1.css ----------------
+/* Minor custom tweaks on top of Bootstrap */
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+####################################################################
+Q2. PERSONAL PORTFOLIO BASICS (BOOTSTRAP UTILITIES)
+####################################################################
+
+---------------- FILE: q2.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q2 - Personal Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q2.css">
+</head>
+<body class="bg-light text-dark">
+
+  <!-- Header with name + tagline, text-center + fw-bold utilities -->
+  <header class="text-center p-5 bg-white">
+    <img src="https://picsum.photos/id/64/150/150" alt="Profile Photo" class="img-fluid rounded-circle mb-3">
+    <h1 class="fw-bold">Utkarsh Tomar</h1>
+    <p class="lead">Aspiring Cybersecurity Professional | Junior Pentester in the making</p>
+  </header>
+
+  <main class="container">
+    <!-- Buttons -->
+    <div class="text-center mt-4 mb-3">
+      <a href="#" class="btn btn-primary me-2">Hire Me</a>
+      <a href="#" class="btn btn-outline-secondary">Download CV</a>
+    </div>
+
+    <!-- Contact form -->
+    <section class="p-5 mt-4 bg-white rounded shadow-sm">
+      <h3 class="text-center mb-4">Get in Touch</h3>
+      <form class="col-md-8 mx-auto">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Your name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="you@example.com">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-center p-3 mt-5 bg-dark text-white">
+    <p class="mb-0">&copy; 2026 Utkarsh Tomar</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q2.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+img.rounded-circle {
+  border: 4px solid #0d6efd;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+####################################################################
+Q3. PRODUCT CATALOG (BOOTSTRAP GRID SYSTEM)
+####################################################################
+
+---------------- FILE: q3.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q3 - Product Catalog</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q3.css">
+</head>
+<body>
+
+  <header class="bg-dark text-white text-center py-4">
+    <h1>Our Products</h1>
+  </header>
+
+  <main class="container my-5">
+    <!-- .row + .col-md-3 gives 4 columns on desktop; Bootstrap auto
+         handles 2 on tablet (col-sm-6) and 1 on mobile (col-12) -->
+    <div class="row g-4">
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 shadow-sm product-card">
+          <img src="https://picsum.photos/id/201/300/200" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Wireless Mouse</h5>
+            <p class="card-text fw-bold">₹999</p>
+            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 shadow-sm product-card">
+          <img src="https://picsum.photos/id/202/300/200" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mechanical Keyboard</h5>
+            <p class="card-text fw-bold">₹2,499</p>
+            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 shadow-sm product-card">
+          <img src="https://picsum.photos/id/203/300/200" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">USB-C Hub</h5>
+            <p class="card-text fw-bold">₹1,299</p>
+            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 shadow-sm product-card">
+          <img src="https://picsum.photos/id/204/300/200" class="card-img-top" alt="Product 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Laptop Stand</h5>
+            <p class="card-text fw-bold">₹799</p>
+            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q3.css ----------------
+/* Hover effect on top of Bootstrap's .shadow-sm */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15) !important;
+}
+
+
+####################################################################
+Q4. RESTAURANT MENU PAGE (BOOTSTRAP CSS COMPONENTS)
+####################################################################
+
+---------------- FILE: q4.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q4 - Restaurant Menu</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+  <header class="bg-danger text-white text-center py-4">
+    <h1>Today's Menu</h1>
+    <p class="lead text-white-50">Fresh dishes, made daily</p>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- Bootstrap table for menu items -->
+    <h3 class="mb-3">Menu Items</h3>
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Paneer Tikka</td><td>Starter</td><td>₹220</td></tr>
+        <tr><td>Butter Chicken</td><td>Main Course</td><td>₹350</td></tr>
+        <tr><td>Veg Biryani</td><td>Main Course</td><td>₹280</td></tr>
+        <tr><td>Gulab Jamun</td><td>Dessert</td><td>₹90</td></tr>
+      </tbody>
+    </table>
+
+    <!-- List group for Chef's Specials -->
+    <h3 class="mt-5 mb-3">Chef's Specials</h3>
+    <ul class="list-group mb-5">
+      <li class="list-group-item d-flex justify-content-between">
+        Tandoori Platter <span class="fw-bold">₹450</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between">
+        Hyderabadi Dum Biryani <span class="fw-bold">₹390</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between">
+        Chocolate Lava Cake <span class="fw-bold">₹150</span>
+      </li>
+    </ul>
+
+    <!-- Food image with caption -->
+    <figure class="text-center">
+      <img src="https://picsum.photos/id/292/500/300" class="img-fluid rounded" alt="Special Dish">
+      <figcaption class="lead mt-2">Our signature Tandoori Platter</figcaption>
+    </figure>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 Spice Route Restaurant</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q4.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+figcaption {
+  color: #555;
+}
+
+
+####################################################################
+Q5. CUSTOM THEMED BLOG HOMEPAGE (BOOTSTRAP THEMES)
+####################################################################
+
+---------------- FILE: q5.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q5 - Themed Blog Homepage</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="q5.css">
+</head>
+<body>
+
+  <header class="text-center py-5 text-white header-theme">
+    <h1 class="fw-bold">The Wanderer's Blog</h1>
+    <p class="lead">Stories, travel and tech — one post at a time</p>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://picsum.photos/id/1041/500/250" class="card-img-top" alt="Blog 1">
+          <div class="card-body">
+            <h5 class="card-title">5 Places to Visit This Winter</h5>
+            <p class="card-text">Explore breathtaking winter destinations perfect for your next trip.</p>
+            <a href="#" class="btn btn-theme">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://picsum.photos/id/1050/500/250" class="card-img-top" alt="Blog 2">
+          <div class="card-body">
+            <h5 class="card-title">Getting Started with Cybersecurity</h5>
+            <p class="card-text">A beginner-friendly roadmap into ethical hacking and pentesting.</p>
+            <a href="#" class="btn btn-theme">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-white text-center py-3 header-theme">
+    <p class="mb-0">&copy; 2026 The Wanderer's Blog</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q5.css ----------------
+/* Override Bootstrap theme variables */
+:root {
+  --bs-primary: #7b2cbf;
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+}
+
+.header-theme {
+  background-color: var(--bs-primary);
+}
+
+.btn-theme {
+  background-color: var(--bs-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-theme:hover {
+  background-color: #5a189a;
+  color: #fff;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+
+####################################################################
+Q6. NOTIFICATIONS DASHBOARD (ALERTS & WELLS)
+####################################################################
+
+---------------- FILE: q6.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q6 - Notifications Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q6.css">
+</head>
+<body class="bg-light">
+
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Notifications Dashboard</h1>
+  </header>
+
+  <main class="container my-5">
+    <div class="card p-4 shadow-sm">
+      <h4 class="mb-3">Recent Notifications</h4>
+
+      <!-- Success alert -->
+      <div class="alert alert-success" role="alert">
+        You have 3 new messages from your team.
+      </div>
+
+      <!-- Info alert -->
+      <div class="alert alert-info" role="alert">
+        Tip: Enable two-factor authentication for better security.
+      </div>
+
+      <!-- Danger alert, dismissible -->
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Warning: Unusual login attempt detected on your account.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- Summary well -->
+      <div class="bg-light border rounded p-4 mt-4">
+        <h5>Summary</h5>
+        <p class="mb-0">You have 1 unread warning and 2 informational updates today. Review them to stay on top of your account activity.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q6.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+####################################################################
+Q7. TASK TRACKER WITH BADGES
+####################################################################
+
+---------------- FILE: q7.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q7 - Task Tracker</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q7.css">
+</head>
+<body class="bg-light">
+
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Task Tracker
+      <!-- Badge counter for pending tasks -->
+      <span class="badge bg-warning text-dark">4 Pending</span>
+    </h1>
+  </header>
+
+  <main class="container my-5">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Fix login page bug
+        <span class="badge bg-danger rounded-pill">High</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Update user documentation
+        <span class="badge bg-warning text-dark rounded-pill">Medium</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Refactor CSS files
+        <span class="badge bg-secondary rounded-pill">Low</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Prepare pentest report
+        <span class="badge bg-danger rounded-pill">High</span>
+      </li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-success">
+        Completed <span class="badge bg-light text-dark ms-1">12</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q7.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.list-group-item {
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+
+####################################################################
+Q8. PRICING PLANS (PANELS & CARDS)
+####################################################################
+
+---------------- FILE: q8.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q8 - Pricing Plans</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q8.css">
+</head>
+<body class="bg-light">
+
+  <header class="text-center py-5">
+    <h1>Choose Your Plan</h1>
+    <p class="lead">Simple, transparent pricing for teams of all sizes</p>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm pricing-card">
+          <div class="card-body text-center">
+            <h4>Basic</h4>
+            <h2 class="fw-bold">₹499<small class="fs-6">/mo</small></h2>
+            <ul class="list-unstyled mt-3">
+              <li>5 Projects</li>
+              <li>Email Support</li>
+              <li>1 GB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary mt-3">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlighted Pro plan -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg pricing-card bg-primary text-white">
+          <div class="card-body text-center">
+            <h4>Pro</h4>
+            <h2 class="fw-bold">₹999<small class="fs-6">/mo</small></h2>
+            <ul class="list-unstyled mt-3">
+              <li>Unlimited Projects</li>
+              <li>Priority Support</li>
+              <li>50 GB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-light mt-3">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm pricing-card">
+          <div class="card-body text-center">
+            <h4>Enterprise</h4>
+            <h2 class="fw-bold">₹2499<small class="fs-6">/mo</small></h2>
+            <ul class="list-unstyled mt-3">
+              <li>Unlimited Everything</li>
+              <li>24/7 Dedicated Support</li>
+              <li>500 GB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary mt-3">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q8.css ----------------
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+
+####################################################################
+Q9. BLOG PAGINATION & PAGER
+####################################################################
+
+---------------- FILE: q9.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q9 - Blog Pagination</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q9.css">
+</head>
+<body class="bg-light">
+
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Blog Posts</h1>
+  </header>
+
+  <main class="container my-5">
+    <p class="text-center">Browse our latest posts on tech, travel and lifestyle.</p>
+
+    <!-- Pagination centered -->
+    <nav aria-label="Blog pagination">
+      <ul class="pagination justify-content-center mt-4">
+        <li class="page-item">
+          <a class="page-link" href="#">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Simple pager -->
+    <div class="d-flex justify-content-between mt-4">
+      <a href="#" class="btn btn-outline-secondary">&laquo; Older Posts</a>
+      <a href="#" class="btn btn-outline-secondary">Newer Posts &raquo;</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q9.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+####################################################################
+Q10. TRAVEL AGENCY SHOWCASE (CAROUSEL & PROGRESS BAR)
+####################################################################
+
+---------------- FILE: q10.html ----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q10 - Travel Agency Showcase</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Wanderlust Travels</h1>
+  </header>
+
+  <main>
+    <!-- Bootstrap Carousel with custom interval per slide -->
+    <div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="https://picsum.photos/id/1015/1200/500" class="d-block w-100" alt="Mountains">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Swiss Alps</h5>
+            <p>Breathtaking peaks and alpine adventures await.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="6000">
+          <img src="https://picsum.photos/id/1039/1200/500" class="d-block w-100" alt="Beach">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Maldives</h5>
+            <p>Crystal clear waters and private island resorts.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://picsum.photos/id/1043/1200/500" class="d-block w-100" alt="City">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tokyo</h5>
+            <p>Where tradition meets futuristic city life.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Progress bar for booking completion -->
+    <section class="container my-5 text-center">
+      <h4>Your Booking Progress</h4>
+      <div class="progress" style="height: 25px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+             role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+          70%
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">Contact us: bookings@wanderlusttravels.com | +91 98765 43210</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+---------------- FILE: q10.css ----------------
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.4);
+  border-radius: 6px;
+}
+
+====================================================================
+END OF FILE
+====================================================================
